@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regristo</title>
+    <link rel="stylesheet" href="Stylos.css">
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #ff0000;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative; /* Para posicionar el logo */
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background: #000000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #e6001b;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .links a {
+            color: #ff0022;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para el logo */
+        .logo {
+            position: absolute;
+            top: -60px; /* Ajusta según sea necesario */
+            left: -500px; /* Ajusta según sea necesario */
+            width: 100px; /* Ajusta el tamaño del logo */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <img src="images.png" alt="Logo" class="logo"> <!-- Logo al costado -->
+        <h2>Regristo</h2>
+        <form action="/ruta/a/tu/servidor" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required>
+            </div>
+            <div class="form-group">
+                <label for="rol">Rol:</label>
+                <select id="rol" name="rol" required>
+                    <option value="" disabled selected>Selecciona un rol</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+            </div>
+            <input type="submit" value="Iniciar Sesión" a href="/Index.html">
+        </form>
+    </div>
+</body>
+
+</html>
